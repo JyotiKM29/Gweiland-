@@ -9,6 +9,10 @@
   .hoverIcon {
     @apply hover:text-yellow-300 text-zinc-50 cursor-pointer transition-all duration-300;
   }
+
+  .btn{
+    @apply flex justify-center items-center text-zinc-50 bg-zinc-950 h-12 w-12 p-2 rounded-full cursor-pointer transition-all duration-300 hover:text-zinc-950 hover:bg-zinc-50;
+  }
 }
 
 .nav{
