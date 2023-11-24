@@ -16,7 +16,7 @@ function Card({name , src , color}) {
     </div>
     <div className='h-full flex flex-col justify-between items-end text-zinc-50'>
     <h2 className='text-3xl font-bold'>{name}</h2>
-    <p className='text-lg font-light border-b'>Shop</p>
+    <p className='font-poppins text-lg font-light border-b'>Shop</p>
     </div>
   </div>
   

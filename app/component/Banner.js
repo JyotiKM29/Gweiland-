@@ -11,7 +11,7 @@ const Banner = () => {
     {url:'/images/banner5.jpg', title:'banner 5'},
   ]
   return (
-    <div className='relative h-[60vh] w-full bg-red-50'>
+    <div className='relative h-[70vh] w-full '>
    
     <ImageSlider slides={slides} />
 
