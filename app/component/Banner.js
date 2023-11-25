@@ -1,19 +1,38 @@
 import Image from 'next/image'
 import React from 'react'
 import ImageSlider from './ImageSlider'
+import Carousel from './Carousel'
 
 const Banner = () => {
   const slides = [
-    {url:'/images/banner1.jpg', title:'banner 1'},
-    {url:'/images/banner2.jpg', title:'banner 2'},
-    {url:'/images/banner3.jpg', title:'banner 3'},
-    // {url:'/images/banner4.jpg', title:'banner 4'},
-    {url:'/images/banner5.jpg', title:'banner 5'},
-  ]
-  return (
-    <div className='relative h-[70vh] w-full '>
+    '/images/banner1.jpg',
+    '/images/banner2.jpg',
+    '/images/banner3.jpg',
+    '/images/banner5.jpg',
    
-    <ImageSlider slides={slides} />
+  ] 
+
+  const slideStylesWidthBackground = {
+    width: "100%",
+    height: "100%",
+    objectFit: "container",
+    backgroundPosition: "center top",
+    filter: "brightness(80%) contrast(110%)  grayscale(10%)",
+    // backgroundImage: `url(${slides[currentIndex].url})`,
+  };
+
+  return (
+    <div className='relative h-[70vh] w-screen '>
+   
+    {/* <ImageSlider slides={slides} /> */}
+    <Carousel>
+      {
+        slides.map((s) => <img 
+         style={slideStylesWidthBackground}
+        key={s} src={s} alt='img' />)
+
+      }
+    </Carousel>
 
   </div>
   )

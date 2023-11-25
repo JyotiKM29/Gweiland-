@@ -9,18 +9,22 @@
   .font-poppins {
     font-family: 'Poppins', sans-serif;
   }
+
+   .cubic-bezier-104-204-492 {
+    transition-timing-function: cubic-bezier(0.104, 0.204, 0.492, 1);
+  }
 }
 
 @layer components {
   .hover {
-    @apply font-poppins border-b-[1px] border-transparent hover:border-yellow-300 hover:text-yellow-300 text-zinc-50 cursor-pointer transition-all duration-300;
+    @apply font-poppins border-b-[1px] border-transparent hover:border-yellow-300 hover:text-yellow-300 text-zinc-50 cursor-pointer transition-all ease-in-out duration-300;
   }
   .hoverIcon {
-    @apply hover:text-yellow-300 text-zinc-50 cursor-pointer transition-all duration-300;
+    @apply hover:text-yellow-300 text-zinc-50 cursor-pointer transition-all ease-in-out duration-300;
   }
 
   .btn{
-    @apply flex justify-center items-center text-zinc-50 bg-zinc-950 h-12 w-12 p-2 rounded-full cursor-pointer transition-all duration-300 hover:text-zinc-950 hover:bg-zinc-50;
+    @apply flex justify-center items-center text-zinc-50 bg-zinc-950 h-12 w-12 p-2 rounded-full cursor-pointer transition-all ease-in-out duration-300 hover:text-zinc-950 hover:bg-zinc-50;
   }
 }
 

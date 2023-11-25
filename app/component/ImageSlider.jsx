@@ -47,12 +47,16 @@ function ImageSlider({ slides }) {
   };
 
   return (
-    <div className="relative h-full w-full" onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+    <div className="relative h-full w-full " 
+    onMouseEnter={handleHover} onMouseLeave={handleLeave}>
       {/* Image Container */}
       <div style={slideStylesWidthBackground} className="relative">
+
+
+      
         {/* arrows container */}
         {isHovered && (
-          <div className="absolute top-0 flex justify-between items-center h-full w-full">
+          <div className="absolute top-0 flex justify-between items-center h-full w-full p-4">
             <button onClick={goToPrevious} className="btn">
               <IoIosArrowRoundBack className="h-7 w-7" />
             </button>
@@ -61,6 +65,21 @@ function ImageSlider({ slides }) {
             </button>
           </div>
         )}
+
+
+        <div className="absolute bottom-4 right-0 left-0">
+        <div className="flex items-center justify-center gap-2">
+          {slides.map((_, i) => (
+            <div
+              className={`
+              transition-all w-2 h-2 bg-white rounded-full
+              ${currentIndex === i ? "p-2" : "bg-opacity-50"}
+            `}
+            />
+          ))}
+          </div>
+      </div>
+  
       </div>
     </div>
   );

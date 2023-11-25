@@ -13,10 +13,7 @@ export default function Home() {
      </div>
     <Banner />
     <Slider />
-    <Banner />
-    <Slider />
-    <Banner />
-    <Slider />
+ 
    </div>
   )
 }
