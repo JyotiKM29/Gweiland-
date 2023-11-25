@@ -4,6 +4,7 @@ import Slider from './component/Slider'
 import Banner from './component/Banner'
 import Announcement from './component/Announcement'
 
+
 export default function Home() {
   return (
    <div className='relative'>
@@ -13,6 +14,7 @@ export default function Home() {
      </div>
     <Banner />
     <Slider />
+   
  
    </div>
   )

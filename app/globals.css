@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;900&display=swap');
 
 @layer utilities {
   .font-poppins {
@@ -53,6 +53,26 @@
   animation: 14s slide infinite linear;
 }
 
+.lineUp {
+  animation: 2s anim-lineUp ease-in-out ;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
 @keyframes slide {
   from {

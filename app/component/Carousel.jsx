@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+
 export default function Carousel({
   children: slides,
   autoSlide = false,
@@ -34,11 +35,17 @@ export default function Carousel({
       onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
-      <div
-        className="relative flex transition-transform ease-out duration-500  w-full h-full"
-        style={{ transform: `translateX(-${curr * 100}%)` }}
-      >
-        {slides}
+      <div className="relative w-full h-full">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute top-0 left-0 w-full h-full ${
+              index === curr ? "" : "hidden"
+            }`}
+          >
+            {slide}
+          </div>
+        ))}
       </div>
 
       {isHovered && (
@@ -56,6 +63,7 @@ export default function Carousel({
         <div className="flex items-center justify-center gap-2">
           {slides.map((_, i) => (
             <div
+              key={i}
               className={`
               transition-all w-3 h-3 bg-white rounded-full
               ${curr === i ? "p-2" : "bg-opacity-50"}
