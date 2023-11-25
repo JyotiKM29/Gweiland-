@@ -33,7 +33,7 @@ function ImageSlider({ slides }) {
     width: "100%",
     height: "100%",
     backgroundSize: "cover",
-    backgroundPosition: "top",
+    backgroundPosition: "center top",
     filter: "brightness(80%) contrast(110%)  grayscale(10%)",
     backgroundImage: `url(${slides[currentIndex].url})`,
   };
